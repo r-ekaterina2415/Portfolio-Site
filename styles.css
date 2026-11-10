@@ -407,10 +407,10 @@ a.case:hover .case__cover { transform: scale(1.015); }
 /* ---------- Concepts ---------- */
 .concepts__track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50%);
-  scroll-padding-inline: max(var(--gutter), (100vw - 2000px) / 2);
+  scroll-padding-inline: max(var(--gutter), (100vw - 1900px) / 2);
   padding-block: 24px;
   margin-block: -24px;
   overflow-x: auto;
