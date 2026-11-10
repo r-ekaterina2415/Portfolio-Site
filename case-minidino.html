@@ -10,21 +10,21 @@
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Manrope:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-case">
   <header class="header">
     <div class="container header__inner">
-      <a class="profile" href="index.html">
+      <a class="profile" href="#top">
         <img class="profile__avatar" src="assets/img/avatar.png" width="40" height="40" alt="">
         <span class="profile__name">Катя Расторгуева</span>
       </a>
 
       <div class="header__actions">
         <nav class="menu" id="site-menu" aria-label="Основное меню">
-          <a class="menu__link is-active" href="index.html#projects">Проекты</a>
-          <a class="menu__link" href="index.html#concepts">Концепты</a>
+          <a class="menu__link is-active" href="#projects" data-section="projects">Проекты</a>
+          <a class="menu__link" href="#concepts" data-section="concepts">Концепты</a>
           <img class="menu__divider" src="assets/icons/divider.svg" width="28" height="1" alt="">
           <a class="menu__link menu__link--ext" href="https://t.me/r_ekaterina2415" target="_blank" rel="noopener">
             Telegram <img src="assets/icons/arrow-up-right.svg" width="16" height="16" alt="">
@@ -146,33 +146,17 @@
 
   </main>
 
-  <footer class="footer container" id="contacts">
-    <div class="contact reveal">
-      <div class="contact__intro">
-        <h2 class="contact__title">Открыта к сотрудничеству <span>и буду рада пообщаться</span></h2>
-        <a class="button" href="assets/rastorgueva-ekaterina-cv.pdf" target="_blank" rel="noopener">
-          Резюме <img class="button__icon" src="assets/icons/arrow-white.svg" width="16" height="16" alt="">
-        </a>
-      </div>
-
-      <ul class="contact__list">
-        <li>
-          <a class="contact__link" href="https://t.me/r_ekaterina2415" target="_blank" rel="noopener">
-            Telegram <img src="assets/icons/arrow-up-right.svg" width="16" height="16" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="contact__link" href="https://tomsk.hh.ru/resume/f0d37228ff0dd548300039ed1f62696d5a6b4d?hhtmFrom=profile" target="_blank" rel="noopener">
-            HeadHunter <img src="assets/icons/arrow-up-right.svg" width="16" height="16" alt="">
-          </a>
-        </li>
-        <li>
-          <button class="contact__link" type="button" data-copy-email="r.ekaterina2415@gmail.com" aria-label="Скопировать email">
-            Email <img src="assets/icons/mail.svg" width="16" height="16" alt="">
-          </button>
-        </li>
-      </ul>
+  <footer class="footer container">
+    <p class="footer__title reveal">Открыта к сотрудничеству!</p>
+    <div class="footer__signature reveal">
+      <img src="assets/icons/signature.svg" width="271" height="52" alt="Для связи со мной">
+      <img class="footer__arrow" src="assets/icons/signature-arrow.svg" width="16" height="51" alt="">
     </div>
+    <nav class="footer__menu reveal" aria-label="Контакты">
+      <a class="menu__link" href="https://t.me/r_ekaterina2415" target="_blank" rel="noopener">Telegram</a>
+      <a class="menu__link" href="https://tomsk.hh.ru/resume/f0d37228ff0dd548300039ed1f62696d5a6b4d?hhtmFrom=profile" target="_blank" rel="noopener">HeadHunter</a>
+      <button class="menu__link" type="button" data-copy-email="r.ekaterina2415@gmail.com" aria-label="Скопировать email">Email <img src="assets/icons/mail.svg" width="16" height="16" alt=""></button>
+    </nav>
   </footer>
 
   <dialog class="lightbox" aria-label="Просмотр изображения">
