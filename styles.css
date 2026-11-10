@@ -159,7 +159,7 @@ button.menu__link {
   border-radius: 25px;
   background: var(--black);
   color: var(--white);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   white-space: nowrap;
@@ -360,14 +360,19 @@ button.menu__link {
 .case__info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+.case__title {
+  margin-top: 6px;
+}
+.case__text {
+  margin-top: 8px;
 }
 
 /* Pills: the first tag (the domain) is highlighted */
 .case__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 3px;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
@@ -377,26 +382,31 @@ button.menu__link {
 .case__tags span {
   padding: 4px 8px;
   border-radius: 6px;
-  background: #eef1f5;
-  color: #8e8e93;
+  background: #F2F3F4;
+  color: var(--gray);
 }
 
 .case__title {
-  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 0;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 32px;
   letter-spacing: -0.16px;
+  transition: color 0.2s ease;
+}
+
+a.case:hover .case__title { color: var(--gray);
   color: var(--black);
   transition: color 0.3s ease;
 }
 
 .case__text {
-  margin-top: 2px;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 22px;
-  color: var(--gray-3);
+  color: var(--gray);
 }
 
 a.case { cursor: pointer; }
