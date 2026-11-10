@@ -33,6 +33,18 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+body.page-case {
+  background: var(--white);
+}
+body.page-case {
+  --black: #21201d;
+  --bg: var(--white);
+  --blue: #0088ff;
+  --indigo: #6155f5;
+  --gray: #8e8e93;
+  --gray-light: #aeaeb2;
+  --gray-5: #e5e5ea;
+}
 
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -167,14 +179,19 @@ button.menu__link {
 }
 
 /* Header: plain links on white, indigo résumé button */
-.page-home .header {
+.page-home .header,
+.page-case .header {
   background: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid var(--gray-5);
 }
-.page-home .header.is-scrolled { background: rgba(255, 255, 255, 0.92); }
-.page-home .header__inner { height: 60px; padding-block: 0; }
-.page-home .header__actions { gap: 24px; }
-.page-home .button {
+.page-home .header.is-scrolled,
+.page-case .header.is-scrolled { background: rgba(255, 255, 255, 0.92); }
+.page-home .header__inner,
+.page-case .header__inner { height: 60px; padding-block: 0; }
+.page-home .header__actions,
+.page-case .header__actions { gap: 24px; }
+.page-home .button,
+.page-case .button {
   gap: 8px;
   padding: 10px 16px 10px 20px;
   border-color: var(--indigo);
@@ -182,14 +199,17 @@ button.menu__link {
 }
 
 @media (min-width: 1101px) {
-  .page-home .menu {
+  .page-home .menu,
+  .page-case .menu {
     height: 40px;
     padding: 0;
     background: none;
     border: 0;
   }
-  .page-home .menu__link { height: 40px; }
-  .page-home .menu__divider {
+  .page-home .menu__link,
+  .page-case .menu__link { height: 40px; }
+  .page-home .menu__divider,
+  .page-case .menu__divider {
     height: 24px;
     margin-inline: 8px;
     background: var(--gray-5);
@@ -202,7 +222,7 @@ button.menu__link {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  padding: 60px 0 100px;
+  padding: 80px 0 120px;
   text-align: center;
 }
 .hello__greeting {
@@ -214,8 +234,8 @@ button.menu__link {
 .hello__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 44px;
-  line-height: 62px;
+  font-size: 40px;
+  line-height: 56px;
 }
 .hello__accent { color: var(--blue); }
 .hello__text {
@@ -223,7 +243,7 @@ button.menu__link {
   line-height: 32px;
   color: var(--gray);
 }
-.hello__text b { font-weight: 400; color: var(--black); }
+.hello__text b { font-weight: 400; color: var(--gray); }
 
 /* Line-by-line fade in */
 .line { display: block; }
@@ -244,10 +264,12 @@ button.menu__link {
   margin-inline: auto;
   padding-bottom: 80px;
 }
-/* The project grid is wider than the other sections, up to 2000px */
-.page-home main.container { --container: 2000px; }
-#projects { max-width: 2000px; padding-bottom: 120px; }
-#concepts { max-width: 2000px; }
+/* The project grid is wider than the other sections, up to 1900px */
+.page-home main.container { --container: 1900px; }
+.page-home .header .container { --container: 1900px; }
+.page-case .header .container { --container: 1900px; }
+#projects { max-width: 1900px; padding-bottom: 120px; }
+#concepts { max-width: 1900px; }
 .section__title {
   font-family: var(--font-display);
   font-weight: 500;
@@ -267,7 +289,7 @@ button.menu__link {
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 64px 24px;
+  gap: 80px 32px;
 }
 
 .case {
@@ -383,18 +405,12 @@ a.case:hover .case__cover { transform: scale(1.015); }
 .case:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 24px; }
 
 /* ---------- Concepts ---------- */
-/* Horizontal slider: square cards, three per view on desktop */
-.page-home { overflow-x: clip; }
-.slider { position: relative; }
-/* The track bleeds to the window edges, while the first card stays aligned with the grid */
 .concepts__track {
   display: flex;
   gap: 16px;
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50%);
-  /* Same offset as the padding, but % here would refer to the track itself */
   scroll-padding-inline: max(var(--gutter), (100vw - 2000px) / 2);
-  /* Room for the hover zoom: overflow-x: auto clips vertically too */
   padding-block: 24px;
   margin-block: -24px;
   overflow-x: auto;
@@ -428,38 +444,6 @@ a.case:hover .case__cover { transform: scale(1.015); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Arrows appear while the slider is hovered and hide at either end */
-.slider__arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 16px rgba(25, 25, 25, 0.12);
-  color: var(--black);
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 0.2s ease, background-color 0.2s ease;
-}
-.slider__arrow--prev { left: 16px; }
-.slider__arrow--next { right: 16px; }
-.slider:hover .slider__arrow,
-.slider__arrow:focus-visible { opacity: 1; }
-.slider__arrow:hover { background: var(--white); }
-.slider__arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.slider .slider__arrow:disabled { opacity: 0; pointer-events: none; }
-
-@media (hover: none) {
-  .slider__arrow { display: none; }
 }
 
 @media (max-width: 960px) {
@@ -561,7 +545,7 @@ a.case:hover .case__cover { transform: scale(1.015); }
 
 .case-row__body h3 {
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 32px;
 }
@@ -778,8 +762,9 @@ a.case:hover .case__cover { transform: scale(1.015); }
 }
 
 /* Home footer: contact card as wide as the project grid */
-.page-home .footer {
-  --container: 2000px;
+.page-home .footer,
+.page-case .footer {
+  --container: 1900px;
   display: block;
   padding-bottom: 40px;
 }
@@ -845,7 +830,8 @@ a.case:hover .case__cover { transform: scale(1.015); }
 }
 
 @media (max-width: 720px) {
-  .page-home .footer { padding-bottom: 16px; }
+  .page-home .footer,
+  .page-case .footer { padding-bottom: 16px; }
   .contact { gap: 32px; padding: 32px 20px 20px; border-radius: 24px; }
   .contact__intro { gap: 24px; }
   .contact__title { font-size: 30px; line-height: 40px; }
@@ -957,7 +943,8 @@ a.case:hover .case__cover { transform: scale(1.015); }
   .menu { width: calc(100% - var(--gutter) * 2); }
   .button { padding: 12px 20px 12px 24px; }
 
-  .page-home .header__inner { height: 56px; }
+  .page-home .header__inner,
+  .page-case .header__inner { height: 56px; }
   .hello { gap: 16px; padding: 40px 0 64px; }
   .hello__greeting { font-size: 17px; line-height: 26px; }
   .hello__title { font-size: 30px; line-height: 40px; }
