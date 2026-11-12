@@ -444,7 +444,7 @@ a.case:hover .case__title { color: var(--gray);
 
 a.case { cursor: pointer; }
 a.case:hover .case__mockup { transform: translateY(-6px) scale(1.01); }
-a.case:hover .case__cover { transform: scale(1.015); }
+a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 .case:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 24px; }
 
 /* ---------- Concepts ---------- */
@@ -579,7 +579,6 @@ a.case:hover .case__cover { transform: scale(1.015); }
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 100px;
 }
 .case-gallery--last { padding-bottom: 0; }
 .case-gallery__pair {
