@@ -503,31 +503,35 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 /* Two-column text rows: 400px aside + content */
 .case-row {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   align-items: flex-start;
   flex-direction:column;
   padding-bottom: 80px;
 }
-.case-row--intro { padding: 32px 0 80px; }
+.case-row--intro { padding: 32px 0 60px; }
 
 .case-row__aside {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 .case-row__body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  flex: 1;
-  min-width: 0;
+  gap: 32px;
+}
+
+.case-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .case-intro__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 40px;
-  line-height: 42px;
+  font-size: 36px;
+  line-height: 48px;
 }
 .case-intro__title--long { line-height: 50px; }
 .case-intro__link {
@@ -556,9 +560,9 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 .case-row__body h3 {
   margin: 0;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 32px;
-  color: var(--gray-3);
+  font-size: 16px;
+  line-height: 24px;
+  color: #a5a9b5;
   text-transform: uppercase;
 }
 
@@ -574,6 +578,23 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   list-style: disc;
 }
 
+.case-text .case-problems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  list-style: none;
+  padding: 16px 0 0 0;
+  margin: 0;
+}
+.case-problems li {
+  padding: 32px 24px;
+  border-radius: 20px;
+  background: #F2F4F8;
+  color: var(--gray-3);
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* Screenshots */
 .case-gallery {
   display: flex;
@@ -585,6 +606,14 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.image-3-2 {
+  aspect-ratio: 3 / 2 !important;
+}
+
+.case-shot:has(.image-3-2) {
+  aspect-ratio: 3 / 2 !important;
 }
 
 .case-shot {
@@ -946,6 +975,7 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   .case-gallery { gap: 12px; padding-bottom: 64px; }
   .case-gallery__pair { grid-template-columns: 1fr; gap: 12px; }
   .case-shot, .case-shot--wide { border-radius: 16px; }
+  .case-problems { grid-template-columns: 1fr; }
 
   :root { --gutter: 16px; }
   .header__inner { gap: 12px; }
