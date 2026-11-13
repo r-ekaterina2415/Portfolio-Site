@@ -605,7 +605,7 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 .case-gallery__pair {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .image-3-2 {
@@ -623,7 +623,7 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   padding: 0;
   border: 0;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 24px;
   background: var(--gray-2);
   cursor: zoom-in;
 }
