@@ -2,7 +2,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- Scroll reveal ---------- */
-  const revealTargets = document.querySelectorAll(".reveal");
+  const revealTargets = document.querySelectorAll(".page-home .reveal");
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealTargets.forEach((el) => el.classList.add("is-visible"));
