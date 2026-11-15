@@ -495,7 +495,7 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 
 /* ---------- Case page ---------- */
 .case-page {
-  padding: 40px var(--gutter) 140px;
+  padding: 40px var(--gutter) 100px;
   max-width: 1000px;
   margin-inline: auto;
 }
@@ -581,15 +581,15 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 .case-text .case-problems {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 4px;
   list-style: none;
   padding: 16px 0 0 0;
   margin: 0;
 }
 .case-problems li {
-  padding: 32px 24px;
-  border-radius: 20px;
-  background: #F2F4F8;
+  padding: 48px 24px;
+  border-radius: 32px;
+  background: #EEF3F9;
   color: var(--gray-3);
   font-size: 16px;
   line-height: 24px;
@@ -605,7 +605,7 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 .case-gallery__pair {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 10px;
 }
 
 .image-3-2 {
@@ -960,6 +960,34 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   .case-row--intro { padding: 56px 0 80px; }
 }
 
+/* ---------- Achievements ---------- */
+.achievements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.achievements__item {
+  padding: 48px 32px 48px 32px;
+  border-radius: 32px;
+  background: #0065FF;
+}
+.achievements__value {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--white);
+  height: 2.5em;
+}
+.achievements__desc {
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+  opacity: 0.8;
+}
+
 @media (max-width: 720px) {
   .case-page { padding-top: 16px; padding-bottom: 80px; }
   .case-row { padding-bottom: 56px; }
@@ -977,6 +1005,11 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
   .case-problems { grid-template-columns: 1fr; }
 
   :root { --gutter: 16px; }
+  .achievements { gap: 12px; padding: 56px 0 80px; }
+  .achievements__item { padding: 24px; }
+  .achievements__value { font-size: 34px; line-height: 42px; }
+  .achievements__desc { font-size: 15px; line-height: 20px; }
+
   .header__inner { gap: 12px; }
   .menu { width: calc(100% - var(--gutter) * 2); }
   .button { padding: 12px 20px 12px 24px; }
