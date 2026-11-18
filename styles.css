@@ -194,8 +194,8 @@ button.menu__link {
 .page-case .button {
   gap: 8px;
   padding: 10px 16px 10px 20px;
-  border-color: var(--indigo);
-  background: var(--indigo);
+  border-color: var(--black);
+  background: var(--black);
 }
 
 @media (min-width: 1101px) {
