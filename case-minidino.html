@@ -65,120 +65,121 @@
 
     <section class="case-row case-row--intro">
       <div class="case-row__aside reveal">
-        <h1 class="case-intro__title">Minidino</h1>
-        <a class="case-intro__link" href="https://минидино.рф" target="_blank" rel="noopener">минидино.рф</a>
-        <p class="case-intro__meta">UX/UI, Adaptive web, B2C, E-commerce, 2025</p>
+        <p class="case__tags"><span>E-commerce</span><span>B2C</span><span>Web</span><span>Mobile App</span><span>2025</span></p>
+        <h1 class="case-intro__title">Каталог и детальная страница товара</h1>
       </div>
       <div class="case-row__body reveal" style="--delay: 120ms">
-        <h3>Контекст</h3>
-        <div class="case-text">
-          <p>Интернет-магазин детской одежды с розничной сетью из 15 магазинов в Сибири и Москве и онлайн-охватом 7&nbsp;млн.</p>
-          <p>В рамках проекта потребовалось пересмотреть структуру ключевых страниц продаж и обновить их дизайн.</p>
+        <div class="case-block">
+          <h3>Контекст</h3>
+          <div class="case-text">
+            <p>«Минидино» — интернет-магазин детской одежды с розничной сетью из 15 магазинов.</p>
+            <p>Я работала в роли UX/UI дизайнера над редизайном каталога и детальной страницы товара для сайта и мобильного приложения.</p>
+          </div>
         </div>
-        <h3>Цель</h3>
-        <div class="case-text">
-          <p>Пересобрать структуру каталога и карточки товара на основе анализа текущих сценариев и конкурентов, создать новый интерфейс для сайта и мобильного приложения и собрать масштабируемый UI-kit для передачи в разработку.</p>
+        <div class="case-block">
+          <h3>Проблема</h3>
+          <div class="case-text">
+            <p>Я провела комплексный анализ данных Яндекс.Метрики и обращений в поддержку покупателей, чтобы определить места, где пользователи теряются или испытывают трудности при покупке. Было выделено несколько ключевых барьеров:</p>
+            <ul class="case-problems">
+              <li>фильтры открываются широкой панелью поверх каталога и перекрывают товары, пользователь теряет контекст</li>
+              <li>все фильтры показаны сразу на одном экране без группировки, пользователю сложно найти нужный параметр</li>
+              <li>28% пользователей открывают фильтры, но не применяют их и закрывают страницу</li>
+              <li>пользователи не могут сразу добавить товар с нужными параметрами в корзину из каталога</li>
+              <li>32% пользователей уходят из каталога, не открыв карточку товара</li>
+              <li>структура карточки товара устарела, необходимая информация о товаре скрыта, либо отсутствует</li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-block">
+          <h3>Задача</h3>
+          <div class="case-text">
+            <p>Моей задачей было разработать новую структуру каталога и обновить дизайн детальной страницы товара для сайта и мобильного приложения, а также собрать масштабируемый UI-kit для передачи в разработку.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="case-row">
       <div class="case-row__aside reveal">
-        <h2 class="case-row__title">Каталог товаров</h2>
+        <h2 class="case-row__title">Каталог</h2>
+      </div>
+      <div class="case-gallery">
+        <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
+          <img class="image-3-2" src="assets/case-2/catalog-desktop.webp" width="1200" height="943" alt="" loading="lazy">
+        </button>
       </div>
       <div class="case-row__body reveal" style="--delay: 120ms">
-        <h3>Процесс</h3>
-        <div class="case-text">
-          <p>Начала работу с анализа текущих пользовательских сценариев и сайтов конкурентов. Изучила, как устроены каталоги интернет-магазинов схожего сегмента, и на этой основе выявила слабые места текущей версии: что неудобно покупателю и какой информации ему не хватает на первом шаге выбора.</p>
-          <p>Добавила слева разделы каталога, чтобы покупатель мог переключаться между категориями, не возвращаясь в меню. В карточке товара изменила компоновку элементов и добавила цвета, теперь доступные расцветки видны ещё до перехода в товар. Фильтр переработала и вынесла в выдвижную панель.</p>
-          <p>Новые элементы собрала в UI-kit в стиле основного сайта, чтобы интерфейсы сайта и мобильного приложения оставались единообразными, а разработчики могли переиспользовать готовые компоненты. Подготовила адаптивные версии макетов для десктопа, планшета и мобильных устройств. После передачи макетов в разработку сопровождала команду на этапе реализации.</p>
+        <div class="case-block">
+          <h3>Гипотезы</h3>
+          <div class="case-text">
+            <p>В процессе работы я сформулировала несколько гипотез:</p>
+            <ul class="case-problems">
+              <li>Если вынести фильтры в боковую панель и сгруппировать параметры, то пользователям будет проще сузить выборку и доля применённых фильтров вырастет.</li>
+              <li>Если дать возможность добавлять товар в корзину с выбором параметров прямо из каталога, то конверсия в корзину вырастет и путь клиента к чеку сократится.</li>
+              <li>Если внедрить мгновенный переход между разделами каталога, то навигация станет непрерывной, что снизит долю уходов без результата.</li>
+              <li>Если отобразить доступные цветовые вариации товара в каталоге, то это снизит когнитивную нагрузку при выборе и доля перехода в карточку вырастет.</li>
+            </ul>
+          </div>
         </div>
-        <h3>Результат</h3>
-        <div class="case-text">
-          <p>Покупатель быстрее ориентируется в ассортименте товаров. Интерфейс, собранный в UI-kit, сохраняет единый визуал на сайте и в мобильном приложении.</p>
-        </div>
+        <div class="case-gallery">
+        <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
+          <img class="image-3-2" src="assets/case-2/catalog-filter.webp" width="1200" height="943" alt="" loading="lazy">
+        </button>
+      </div>
       </div>
     </section>
-
-    <div class="case-gallery">
-      <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 731">
-        <img src="assets/case-2/catalog-desktop.webp" width="1200" height="731" alt="" loading="lazy">
-      </button>
-      <div class="case-gallery__pair">
-        <button class="case-shot reveal" type="button" data-lightbox>
-          <img src="assets/case-2/catalog-mobile-1.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-        <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
-          <img src="assets/case-2/catalog-mobile-2.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-      </div>
-    </div>
 
     <section class="case-row">
       <div class="case-row__aside reveal">
         <h2 class="case-row__title">Карточка товара</h2>
+         <div class="case-block">
+          <h3>Процесс</h3>
+          <div class="case-text">
+            <p>Начала работу с анализа текущих пользовательских сценариев и сайтов конкурентов. Изучила, как устроены каталоги интернет-магазинов схожего сегмента, и на этой основе выявила слабые места текущей версии: что неудобно покупателю и какой информации ему не хватает на первом шаге выбора.</p>
+            <p>Добавила слева разделы каталога, чтобы покупатель мог переключаться между категориями, не возвращаясь в меню. В карточке товара изменила компоновку элементов и добавила цвета, теперь доступные расцветки видны ещё до перехода в товар. Фильтр переработала и вынесла в выдвижную панель.</p>
+            <p>Новые элементы собрала в UI-kit в стиле основного сайта, чтобы интерфейсы сайта и мобильного приложения оставались единообразными, а разработчики могли переиспользовать готовые компоненты. Подготовила адаптивные версии макетов для десктопа, планшета и мобильных устройств. После передачи макетов в разработку сопровождала команду на этапе реализации.</p>
+          </div>
+        </div>
+      </div>
+      <div class="case-gallery">
+        <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
+          <img class="image-3-2" src="assets/case-2/product-desktop.webp" width="1200" height="943" alt="" loading="lazy">
+        </button>
       </div>
       <div class="case-row__body reveal" style="--delay: 120ms">
-        <h3>Процесс</h3>
-        <div class="case-text">
-          <p>Страница товара — ключевой элемент e-commerce. Я переработала структуру, добавила блок с составом, размерами и доставкой, чтобы покупателю было проще принять решение.</p>
+        <div class="case-block">
+          <h3>Процесс</h3>
+          <div class="case-text">
+            <p>Страница товара — ключевой элемент e-commerce. Я переработала структуру, добавила блок с составом, размерами и доставкой, чтобы покупателю было проще принять решение.</p>
+          </div>
         </div>
-        <h3>Результат</h3>
-        <div class="case-text">
-          <p>Новая страница товара повышает доверие и снижает количество вопросов в поддержку.</p>
+        <div class="case-gallery__pair">
+          <button class="case-shot reveal" type="button" data-lightbox>
+            <img src="assets/case-2/product-mobile-1.webp" width="590" height="590" alt="" loading="lazy">
+          </button>
+          <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
+            <img src="assets/case-2/product-mobile-2.webp" width="590" height="590" alt="" loading="lazy">
+          </button>
         </div>
       </div>
     </section>
 
-    <div class="case-gallery case-gallery--last">
-      <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 1027">
-        <img src="assets/case-2/product-desktop.webp" width="1200" height="1027" alt="" loading="lazy">
-      </button>
-      <div class="case-gallery__pair">
-        <button class="case-shot reveal" type="button" data-lightbox>
-          <img src="assets/case-2/product-mobile-1.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-        <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
-          <img src="assets/case-2/product-mobile-2.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-      <div class="case-gallery__pair">
-        <button class="case-shot reveal" type="button" data-lightbox>
-          <img src="assets/case-2/catalog-mobile-1.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-        <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
-          <img src="assets/case-2/catalog-mobile-2.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
+    <div class="achievements">
+      <div class="achievements__item">
+        <p class="achievements__value">2 месяца</p>
+        <p class="achievements__desc">сдали проект в согласованные сроки</p>
       </div>
-    </div>
-
-    <section class="case-row">
-      <div class="case-row__aside reveal">
-        <h2 class="case-row__title">Детальная страница товара</h2>
+      <div class="achievements__item">
+        <p class="achievements__value">UI-kit</p>
+        <p class="achievements__desc">единый визуал на сайте и в приложении</p>
       </div>
-      <div class="case-row__body reveal" style="--delay: 120ms">
-        <h3>Процесс</h3>
-        <div class="case-text">
-          <p>Пересобрала структуру страницы, чтобы ключевая информация о товаре была видна на первом экране, а не терялась среди фотографий, растянутых на несколько экранов как в старой версии. Добавила данные, которые помогают принять решение без лишних шагов, включая условия доставки и оплаты, описание и состав. Внизу страницы разместила подборку похожих товаров, чтобы покупатель мог продолжить выбор, не возвращаясь в каталог.</p>
-          <p>Новые элементы собрала в UI-kit в стиле основного сайта, чтобы интерфейсы сайта и мобильного приложения оставались единообразными, а разработчики могли переиспользовать готовые компоненты. Подготовила адаптивные версии макетов для десктопа, планшета и мобильных устройств. После передачи макетов в разработку сопровождала команду на этапе реализации.</p>
-        </div>
-        <h3>Результат</h3>
-        <div class="case-text">
-          <p>Покупатель видит ключевую информацию о товаре на первом экране и может принять решение о покупке, не уходя со страницы.</p>
-        </div>
+      <div class="achievements__item">
+        <p class="achievements__value">+15%</p>
+        <p class="achievements__desc">скорость навигации по каталогу</p>
       </div>
-    </section>
-
-    <div class="case-gallery case-gallery--last">
-      <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 1027">
-        <img src="assets/case-2/product-desktop.webp" width="1200" height="1027" alt="" loading="lazy">
-      </button>
-      <div class="case-gallery__pair">
-        <button class="case-shot reveal" type="button" data-lightbox>
-          <img src="assets/case-2/product-mobile-1.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
-        <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
-          <img src="assets/case-2/product-mobile-2.webp" width="590" height="590" alt="" loading="lazy">
-        </button>
+      <div class="achievements__item">
+        <p class="achievements__value">-20%</p>
+        <p class="achievements__desc">вопросов в поддержку по товарам</p>
       </div>
     </div>
 
