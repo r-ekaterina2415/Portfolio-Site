@@ -66,82 +66,78 @@
     <section class="case-row case-row--intro">
       <div class="case-row__aside reveal">
         <p class="case__tags"><span>E-commerce</span><span>B2B</span><span>Web</span><span>2026</span></p>
-        <h1 class="case-intro__title">CRM для парфюмерной компании</h1>
+        <h1 class="case-intro__title">CRM для менеджеров</h1>
       </div>
       <div class="case-row__body reveal" style="--delay: 120ms">
         <div class="case-block">
           <h3>Контекст</h3>
           <div class="case-text">
-            <p>Французская парфюмерная компания, работающая с клиентами и партнёрами по всему миру.</p>
-            <p>Компании требовалась собственная CRM-система, которая упростила бы менеджерам работу с клиентами и собрала все процессы в одном интерфейсе.</p>
+            <p>«IASMOS» — французская B2B-компания по производству парфюмерии на заказ. Занимается полным сопровождением проектов: разработка композиции, регуляторные вопросы, дизайн и производство.</p>
+            <p>Компании требовалась собственная CRM-система, которая упростила бы менеджерам работу с клиентами и собрала все бизнес-процессы в одном интерфейсе.</p>
           </div>
         </div>
         <div class="case-block">
           <h3>Проблема</h3>
           <div class="case-text">
-            <p>На основе анализа данных и обратной связи от пользователей я выявила ключевые проблемы:</p>
+            <p>Я провела аудит рабочих процессов и интервью с менеджерами. Выявила ключевые проблемы в управлении клиентской базой:</p>
             <ul class="case-problems">
-              <li>Менеджеры тратят много времени на поиск информации о клиентах</li>
-              <li>Нет единой системы для отслеживания статусов сделок</li>
-              <li>Отсутствует визуализация воронки продаж</li>
-              <li>Старые инструменты не адаптированы под специфику парфюмерного бизнеса</li>
+              <li>менеджеры хранят данные в рабочих таблицах и чатах, история взаимодействий с клиентом фрагментирована</li>
+              <li>старые инструменты не учитывают специфику парфюмерного бизнеса и структуру сложных проектов</li>
+              <li>20% рабочего времени менеджеров уходит на монотонный ручной ввод данных вместо работы с клиентами</li>
+              <li>клиенты не имеют возможности самостоятельно отслеживать статус проекта и обращаются к менеджеру для уточнения деталей.</li>
             </ul>
           </div>
         </div>
         <div class="case-block">
           <h3>Задача</h3>
           <div class="case-text">
-            <p>Спроектировать с нуля интерфейс веб-приложения из 20+ экранов для управления работой менеджеров с клиентами, выстроить сценарии для каждой роли пользователей и подготовить макеты к передаче в разработку.</p>
+            <p>Моей задачей было разработать CRM-систему с тремя ролями доступа: менеджер, клиент и администратор. Централизовать документы и переписку, упростить коммуникацию менеджеров с клиентами.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="case-row">
-      <div class="case-row__aside reveal">
-        <h2 class="case-row__title">CRM</h2>
-      </div>
+    <section class="case-row" style="padding-bottom: 0 !important;">
       <div class="case-gallery">
         <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
-          <img class="image-3-2" src="assets/case-4/crm-1.webp" width="1200" height="943" alt="" loading="lazy">
+          <img class="image-3-2" src="assets/case-4/crm-desktop.webp" width="1200" height="943" alt="" loading="lazy">
         </button>
       </div>
       <div class="case-row__body reveal" style="--delay: 120ms">
         <div class="case-block">
-          <h3>Процесс</h3>
+          <h3>Гипотезы</h3>
           <div class="case-text">
-            <p>Работа над проектом началась с брифинга, на котором уточнила задачи и требования заказчика. На этой основе определила ключевые сценарии для каждой роли и собрала вайрфреймы всех экранов, чтобы согласовать структуру и логику приложения. Затем разработала дизайн-концепцию и проверила её на нескольких ключевых экранах. Собрала библиотеку компонентов для таблиц, форм и статусов. После утверждения концепции спроектировала остальные экраны в едином стиле и по итогам финального согласования передала макеты в разработку.</p>
+            <p>В процессе работы я сформулировала несколько гипотез:</p>
+            <ul class="case-problems">
+              <li>Если отображать клиентскую базу в виде канбана/списка и добавить быстрый поиск, то менеджеры быстрее найдут нужные контакты.</li>
+              <li>Если интегрировать чат с клиентом прямо в карточку проекта, то контекст переписки сохранится на всех этапах.</li>
+              <li>Если визуализировать этапы проекта в виде таймлайна, то клиенту будет понятен текущий статус работы без лишних уточнений у менеджера.</li>
+              <li>Если предоставить клиенту возможность самостоятельно загружать документы в проект, то материалы сразу попадут в единую базу, что исключит потерю файлов.</li>
+            </ul>
           </div>
         </div>
-        <div class="case-gallery__pair">
-          <button class="case-shot reveal" type="button" data-lightbox>
-            <img src="assets/case-4/crm-2.webp" width="590" height="590" alt="" loading="lazy">
-          </button>
-          <button class="case-shot reveal" type="button" data-lightbox style="--delay: 120ms">
-            <img src="assets/case-4/crm-3.webp" width="590" height="590" alt="" loading="lazy">
-          </button>
+        <div class="case-gallery">
+        <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
+          <img class="image-3-2" src="assets/case-4/crm-desktop-detail.webp" width="1200" height="943" alt="" loading="lazy">
+        </button>
+      </div>
+      </div>
+
+      <div class="case-row__body reveal" style="--delay: 120ms">
+        <div class="case-block">
+          <h3>Процесс</h3>
+          <div class="case-text">
+            <p>Спроектировала 20+ экранов CRM-системы для трех ролей доступа. Реализовала карточку проекта с чатом и таймлайном, личный кабинет клиента для загрузки документов и базу клиентов в виде канбана и списка с быстрым поиском.</p>
+            <p>Собрала дизайн в компонентную библиотеку. Подготовила макеты для передачи в разработку.</p>
+          </div>
         </div>
+        <div class="case-gallery">
+        <button class="case-shot case-shot--wide reveal" type="button" data-lightbox style="--ratio: 1200 / 943">
+          <img class="image-3-2" src="assets/case-4/crm-desktop-detail-1.webp" width="1200" height="943" alt="" loading="lazy">
+        </button>
+      </div>
       </div>
     </section>
-
-    <div class="achievements">
-      <div class="achievements__item">
-        <p class="achievements__value">20+</p>
-        <p class="achievements__desc">экранов спроектировано</p>
-      </div>
-      <div class="achievements__item">
-        <p class="achievements__value">3</p>
-        <p class="achievements__desc">роли пользователей</p>
-      </div>
-      <div class="achievements__item">
-        <p class="achievements__value">3 месяца</p>
-        <p class="achievements__desc">сдали проект в согласованные сроки</p>
-      </div>
-      <div class="achievements__item">
-        <p class="achievements__value">Единый стиль</p>
-        <p class="achievements__desc">все экраны в одной дизайн-концепции</p>
-      </div>
-    </div>
 
   </main>
 

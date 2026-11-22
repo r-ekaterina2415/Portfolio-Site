@@ -968,10 +968,13 @@ a.case:not(.case--detail):hover .case__cover { transform: scale(1.015); }
 }
 .achievements__item {
   position: relative;
-  padding: 48px 32px;
-  border-radius: 32px;
+  padding: 32px;
+  border-radius: 20px;
   background: #F2F3F4 url(assets/case-1/background.png) center/cover no-repeat;
   overflow: hidden;
+}
+.page-case--minidino .achievements__item {
+  background: #F2F3F4 url(assets/case-2/background.png) center/cover no-repeat;
 }
 .achievements__value {
   margin: 0;
